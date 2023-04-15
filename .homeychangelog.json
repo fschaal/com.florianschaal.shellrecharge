@@ -1,0 +1,11 @@
+{
+  "1.0.0": {
+    "en": "Initial release of the Shell Recharge Charge Points App for Homey"
+  },
+  "1.0.1": {
+    "en": "small fix"
+  },
+  "1.0.2": {
+    "en": "Fixed store images"
+  }
+}

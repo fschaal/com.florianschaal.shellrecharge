@@ -1,0 +1,8 @@
+{
+  "type": "string",
+  "title": { "en": "Price per KWh" },
+  "getable": true,
+  "setable": false,
+  "uiComponent": "sensor",
+  "icon": "assets/money.svg"
+}

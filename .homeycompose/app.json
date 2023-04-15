@@ -1,0 +1,42 @@
+{
+  "id": "com.florianschaal.shellrecharge",
+  "version": "1.0.2",
+  "compatibility": ">=5.0.0",
+  "sdk": 3,
+  "brandColor": "#0193A4",
+  "platforms": [
+    "local"
+  ],
+  "name": {
+    "en": "Shell Recharge"
+  },
+  "description": {
+    "en": "Keep track of EV charger availability and price."
+  },
+  "category": [
+    "energy"
+  ],
+  "permissions": [
+    "homey:manager:geolocation"
+  ],
+  "images": {
+    "small": "/assets/images/small.jpg",
+    "large": "/assets/images/large.jpg",
+    "xlarge": "/assets/images/xlarge.jpg"
+  },
+  "author": {
+    "name": "Florian Schaal",
+    "email": "florian.keekje@gmail.com"
+  },
+  "support": "mailto:florian.keekje@gmail.com",
+  "contributing": {
+    "donate": {
+      "paypal": {
+        "username": "fschaal01"
+      },
+      "bunq": {
+        "username": "fschaal"
+      }
+    }
+  }
+}

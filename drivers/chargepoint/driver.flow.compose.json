@@ -1,0 +1,56 @@
+{
+  "triggers": [
+    {
+      "id": "connector_availability_changed",
+      "title": {
+        "en": "The availability of connectors changed"
+      },
+      "hint": {
+        "en": "This card will trigger when the number of available connectors changes"
+      },
+      "tokens": [
+        {
+          "type": "number",
+          "name": "free_connectors",
+          "title": {
+            "en": "Number of available connectors"
+          },
+          "example": {
+            "en": "5"
+          }
+        },
+        {
+          "type": "string",
+          "name": "connector_type",
+          "title": {
+            "en": "Connector Type"
+          },
+          "example": {
+            "en": "type2 11kW"
+          }
+        }
+      ]
+    },
+    {
+      "id": "price_changed",
+      "title": {
+        "en": "The price per kWh changed"
+      },
+      "hint": {
+        "en": "This card will trigger when the price per kWh changes"
+      },
+      "tokens": [
+        {
+          "type": "number",
+          "name": "price_per_kwh",
+          "title": {
+            "en": "Price per kWh"
+          },
+          "example": {
+            "en": "0.55"
+          }
+        }
+      ]
+    }
+  ]
+}

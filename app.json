@@ -1,0 +1,300 @@
+{
+  "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
+  "id": "com.florianschaal.shellrecharge",
+  "version": "1.0.2",
+  "compatibility": ">=5.0.0",
+  "sdk": 3,
+  "brandColor": "#0193A4",
+  "platforms": [
+    "local"
+  ],
+  "name": {
+    "en": "Shell Recharge"
+  },
+  "description": {
+    "en": "Keep track of EV charger availability and price."
+  },
+  "category": [
+    "energy"
+  ],
+  "permissions": [
+    "homey:manager:geolocation"
+  ],
+  "images": {
+    "small": "/assets/images/small.jpg",
+    "large": "/assets/images/large.jpg",
+    "xlarge": "/assets/images/xlarge.jpg"
+  },
+  "author": {
+    "name": "Florian Schaal",
+    "email": "florian.keekje@gmail.com"
+  },
+  "support": "mailto:florian.keekje@gmail.com",
+  "contributing": {
+    "donate": {
+      "paypal": {
+        "username": "fschaal01"
+      },
+      "bunq": {
+        "username": "fschaal"
+      }
+    }
+  },
+  "flow": {
+    "triggers": [
+      {
+        "id": "connector_availability_changed",
+        "title": {
+          "en": "The availability of connectors changed"
+        },
+        "hint": {
+          "en": "This card will trigger when the number of available connectors changes"
+        },
+        "tokens": [
+          {
+            "type": "number",
+            "name": "free_connectors",
+            "title": {
+              "en": "Number of available connectors"
+            },
+            "example": {
+              "en": "5"
+            }
+          },
+          {
+            "type": "string",
+            "name": "connector_type",
+            "title": {
+              "en": "Connector Type"
+            },
+            "example": {
+              "en": "type2 11kW"
+            }
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=chargepoint"
+          }
+        ]
+      },
+      {
+        "id": "price_changed",
+        "title": {
+          "en": "The price per kWh changed"
+        },
+        "hint": {
+          "en": "This card will trigger when the price per kWh changes"
+        },
+        "tokens": [
+          {
+            "type": "number",
+            "name": "price_per_kwh",
+            "title": {
+              "en": "Price per kWh"
+            },
+            "example": {
+              "en": "0.55"
+            }
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=chargepoint"
+          }
+        ]
+      }
+    ]
+  },
+  "drivers": [
+    {
+      "name": {
+        "en": "Charge Point"
+      },
+      "class": "other",
+      "capabilities": [],
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
+      "images": {
+        "small": "/drivers/chargepoint/assets/images/small.png",
+        "large": "/drivers/chargepoint/assets/images/large.png",
+        "xlarge": "/drivers/chargepoint/assets/images/xlarge.png"
+      },
+      "pair": [
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          },
+          "options": {
+            "singular": true
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "id": "chargepoint"
+    }
+  ],
+  "capabilities": {
+    "available_Domestic_22": {
+      "type": "string",
+      "title": {
+        "en": "Available Connectors"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "icon": "assets/domestic.svg"
+    },
+    "available_Domestic_3": {
+      "type": "string",
+      "title": {
+        "en": "Available Connectors"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "icon": "assets/domestic.svg"
+    },
+    "available_TepcoCHAdeMO_50": {
+      "type": "string",
+      "title": {
+        "en": "Available Connectors"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "icon": "assets/tepcochademo.svg"
+    },
+    "available_Type2_11": {
+      "type": "string",
+      "title": {
+        "en": "Available Connectors"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "icon": "assets/type2.svg"
+    },
+    "available_Type2_17": {
+      "type": "string",
+      "title": {
+        "en": "Available Connectors"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "icon": "assets/type2.svg"
+    },
+    "available_Type2_22": {
+      "type": "string",
+      "title": {
+        "en": "Available Connectors"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "icon": "assets/type2.svg"
+    },
+    "available_Type2_23": {
+      "type": "string",
+      "title": {
+        "en": "Available Connectors"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "icon": "assets/type2.svg"
+    },
+    "available_Type2_3": {
+      "type": "string",
+      "title": {
+        "en": "Available Connectors"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "icon": "assets/type2.svg"
+    },
+    "available_Type2_5": {
+      "type": "string",
+      "title": {
+        "en": "Available Connectors"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "icon": "assets/type2.svg"
+    },
+    "available_Type2Combo_50": {
+      "type": "string",
+      "title": {
+        "en": "Available Connectors"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "icon": "assets/type2combo.svg"
+    },
+    "available_Type3_11": {
+      "type": "string",
+      "title": {
+        "en": "Available Connectors"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "icon": "assets/type3.svg"
+    },
+    "available_Type3_17": {
+      "type": "string",
+      "title": {
+        "en": "Available Connectors"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "icon": "assets/type3.svg"
+    },
+    "available_Type3_22": {
+      "type": "string",
+      "title": {
+        "en": "Available Connectors"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "icon": "assets/type3.svg"
+    },
+    "available_Type3_3": {
+      "type": "string",
+      "title": {
+        "en": "Available Connectors"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "icon": "assets/type3.svg"
+    },
+    "price_per_kwh": {
+      "type": "string",
+      "title": {
+        "en": "Price per KWh"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "icon": "assets/money.svg"
+    }
+  }
+}

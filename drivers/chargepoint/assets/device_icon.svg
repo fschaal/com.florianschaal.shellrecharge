@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+	<title>fuel-electric</title>
+	<g stroke-linecap="round" stroke-linejoin="round" stroke-width="2" fill="#898994" stroke="#898994">
+		<path fill="none" stroke-miterlimit="10" d="M43,42v1.5 c0,3.58985,2.91015,6.5,6.5,6.5h0.00001c3.58985,0,6.5-2.91015,6.5-6.5L56,28"></path>
+		<line fill="none" stroke-miterlimit="10" x1="60" y1="18" x2="60" y2="12"></line>
+		<rect x="13" y="13" fill="none" stroke-miterlimit="10" width="23" height="17"></rect>
+		<line fill="none" stroke-miterlimit="10" x1="52" y1="18" x2="52" y2="12"></line>
+		<line fill="none" stroke-miterlimit="10" x1="13" y1="36" x2="21" y2="36"></line>
+		<path fill="none" stroke="#898994" stroke-miterlimit="10" d="M56.00001,28h-0.00002 C52.68629,28,50,25.31371,50,22.00001V18h12v4.00001C62,25.31371,59.31371,28,56.00001,28z"></path>
+		<path fill="none" stroke="#898994" stroke-miterlimit="10" d="M6,58V10c0-2.20914,1.79086-4,4-4h29 c2.20914,0,4,1.79086,4,4v48"></path>
+		<line fill="none" stroke="#898994" stroke-miterlimit="10" x1="2" y1="58" x2="47" y2="58"></line>
+	</g>
+</svg>
