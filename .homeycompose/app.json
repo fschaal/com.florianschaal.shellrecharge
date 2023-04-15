@@ -39,6 +39,8 @@
       }
     }
   },
-  "bugs": "https://github.com/fschaal/com.florianschaal.shellrecharge/issues",
+  "bugs": {
+    "url": "https://github.com/fschaal/com.florianschaal.shellrecharge/issues"
+  },
   "source": "https://github.com/fschaal/com.florianschaal.shellrecharge"
 }
