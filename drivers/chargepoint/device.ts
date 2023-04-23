@@ -17,7 +17,7 @@ class ChargePoint extends Homey.Device {
 
         try {
             await this.updateDevice(true);
-        }catch (e) {
+        } catch (e) {
             this.log(e);
         }
         this.start_update_loop();
@@ -38,7 +38,7 @@ class ChargePoint extends Homey.Device {
     async updateDevice(registerCapabilities: boolean = false) {
         this.log('Updating device');
         const chargePoint = await this.rechargeClient?.getChargePoints(this.getData().id);
-        if(chargePoint == null)  return;
+        if (chargePoint == null) return;
 
         const groupedConnectors = EvsesHelper.toGroupedConnectors(chargePoint.evses);
 
@@ -63,23 +63,23 @@ class ChargePoint extends Homey.Device {
         }
 
         if (oldData) {
-            const connectorAvailabilityTrigger = this.homey.flow.getTriggerCard("connector_availability_changed");
-            const priceChanged = this.homey.flow.getTriggerCard("price_changed");
+            const connectorAvailabilityTrigger = this.homey.flow.getDeviceTriggerCard("connector_availability_changed");
+            const priceChanged = this.homey.flow.getDeviceTriggerCard("price_changed");
 
             for (const groupedConnector of groupedConnectors) {
                 const oldConnector = oldData.find((old) => old.connectorType === groupedConnector.connectorType && old.maxPower === groupedConnector.maxPower);
                 if (oldConnector) {
                     if (oldConnector.available !== groupedConnector.available) {
-                       await connectorAvailabilityTrigger.trigger({
+                        await connectorAvailabilityTrigger.trigger(this, {
                             free_connectors: groupedConnector.available,
                             connector_type: `${groupedConnector.connectorType} - ${groupedConnector.maxPower}kW`,
-                        },{});
+                        }, {});
                     }
 
-                    if(oldConnector.pricePerKwh !== groupedConnector.pricePerKwh) {
-                        await priceChanged.trigger({
+                    if (oldConnector.pricePerKwh !== groupedConnector.pricePerKwh) {
+                        await priceChanged.trigger(this, {
                             price_per_kwh: groupedConnector.pricePerKwh,
-                        },{});
+                        }, {});
                     }
                 }
             }
