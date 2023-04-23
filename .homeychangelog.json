@@ -10,5 +10,8 @@
   },
   "1.0.3": {
     "en": "Added link for bugs and source"
+  },
+  "1.0.4": {
+    "en": "Fixed bug where card would not trigger"
   }
 }
